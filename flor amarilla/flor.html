@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girasol Animado</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #b73e8f;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sunflower {
+            position: relative;
+            width: 200px;
+            height: 300px;
+        }
+
+        .center {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            animation: growCenter 2s ease-in-out forwards;
+        }
+
+        @keyframes growCenter {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .center-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #4CAF50; /* Verde */
+            border-radius: 50%;
+            position: absolute;
+            left: 70px;
+            top: 120px;
+            z-index: 3; /* Colocar el círculo sobre el centro */
+        }
+
+        .petal {
+            width: 30px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 20px;
+            left: 85px;
+            border-radius: 50%;
+            transform-origin: 50% 100%;
+            animation: rotatePetal 2s ease-in-out alternate infinite;
+            z-index: 1; /* Colocar los pétalos detrás del centro */
+        }
+
+        @keyframes rotatePetal {
+            to {
+                transform: rotate(20deg);
+            }
+        }
+
+        /* Añadir todos los pétalos */
+        .petal:nth-child(2) {
+            transform: rotate(22.5deg);
+            animation-delay: 0.1s;
+        }
+
+        .petal:nth-child(3) {
+            transform: rotate(45deg);
+            animation-delay: 0.2s;
+        }
+
+        .petal:nth-child(4) {
+            transform: rotate(67.5deg);
+            animation-delay: 0.3s;
+        }
+
+        .petal:nth-child(5) {
+            transform: rotate(90deg);
+            animation-delay: 0.4s;
+        }
+
+        .petal:nth-child(6) {
+            transform: rotate(112.5deg);
+            animation-delay: 0.5s;
+        }
+
+        .petal:nth-child(7) {
+            transform: rotate(135deg);
+            animation-delay: 0.6s;
+        }
+
+        .petal:nth-child(8) {
+            transform: rotate(157.5deg);
+            animation-delay: 0.7s;
+        }
+
+        .petal:nth-child(9) {
+            transform: rotate(180deg);
+            animation-delay: 0.8s;
+        }
+
+        .petal:nth-child(10) {
+            transform: rotate(202.5deg);
+            animation-delay: 0.9s;
+        }
+
+        .petal:nth-child(11) {
+            transform: rotate(225deg);
+            animation-delay: 1s;
+        }
+
+        .petal:nth-child(12) {
+            transform: rotate(247.5deg);
+            animation-delay: 1.1s;
+        }
+
+        .petal:nth-child(13) {
+            transform: rotate(270deg);
+            animation-delay: 1.2s;
+        }
+
+        .petal:nth-child(14) {
+            transform: rotate(292.5deg);
+            animation-delay: 1.3s;
+        }
+
+        .petal:nth-child(15) {
+            transform: rotate(315deg);
+            animation-delay: 1.4s;
+        }
+
+        .petal:nth-child(16) {
+            transform: rotate(337.5deg);
+            animation-delay: 1.5s;
+        }
+
+        .message {
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            opacity: 0;
+            animation: fadeInMessage 2s ease-in-out 2s forwards;
+        }
+
+        @keyframes fadeInMessage {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sunflower">
+            <div class="center-circle"></div> <!-- Círculo verde en el centro -->
+            <!-- Agregar todos los pétalos -->
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+        <div class="message">Te amo</div>
+    </div>
+</body>
+</html>
